@@ -563,6 +563,11 @@ function randomPage(req, res) {
   var paragraphs = randomParagraphs(seed);
   var links = randomLinks(seed, req.hostname);
 
+  console.log({title: title, paragraphs: paragraphs, links: links})
+  console.log("This is a message with structured data", {title: title, paragraphs: paragraphs, links: links})
+  console.log('{"json":["abc","123",1024,true]}')
+  console.log('This is a message with JSON {"json":["abc","123",1024,true]}')
+
   res.render('random', {title: title, paragraphs: paragraphs, links: links});
 }
 
